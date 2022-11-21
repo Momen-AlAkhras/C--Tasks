@@ -14,6 +14,8 @@ namespace ConsoleApp3
             Console.WriteLine("Input your name");
             string name = Console.ReadLine();
             Console.WriteLine(name);
+
+
             Console.WriteLine("Task 2");
             int number = 0;
             string name2 = "John";
@@ -27,9 +29,12 @@ namespace ConsoleApp3
             Console.WriteLine(b);
             Console.WriteLine(yay);
             Console.WriteLine(t);
+
+
             Console.WriteLine("Task 3");
             string[] cars = { "Volvo", "Fiat", "Hyundai" };
             Console.WriteLine(cars[1]);
+
             Console.WriteLine("Task 4");
             Console.WriteLine("Input your Details");
             Console.Write("Name:"); string fname = Console.ReadLine();
@@ -37,6 +42,7 @@ namespace ConsoleApp3
             Console.Write("Uni:"); string Uni =Console.ReadLine();
             Console.Write("Major:"); string Major = Console.ReadLine();
             Console.WriteLine(fname); Console.WriteLine(Age); Console.WriteLine(Uni); Console.WriteLine(Major);
+
             Console.WriteLine("Task 5");
             string[] num = new string[10];
             for (int i = 0; i < num.Length; i++)
