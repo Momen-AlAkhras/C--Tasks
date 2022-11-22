@@ -96,9 +96,9 @@ namespace _21_11_2022
             else if (num8 > num7 && num8 > num9 && num8 > num10 && num8 > num11)
             {
                 Console.WriteLine($"The biggest number is {num8}");
-            }
+}
             else if (num9 > num7 && num9 > num8 && num9 > num10 && num9 > num11)
-            {
+                        {
                 Console.WriteLine($"The biggest number is {num9}");
             }
             else if (num10 > num7 && num10 > num8 && num10 > num9 && num10 > num11)
@@ -125,16 +125,17 @@ namespace _21_11_2022
             int sum = (int)(hours*60 + minutes);
             Console.WriteLine(sum);
             int sum2 = (int)(hours/60 + minutes*60);
-            Console.WriteLine(sum2);
+            Console.WriteLine(sum2); 
             //Task7----------------------------------------------------------------
             Console.WriteLine("Task 6");
             Console.WriteLine("\n");
-            string[] name = { "Momen", "Razan", "Amer", "Qais", "Sawalha" };
+            string[] name = { "Razan", "Momen", "Amer", "Qais", "Sawalha","Yazeed"};
             Console.WriteLine(name[0].Substring(0, 3));
             Console.WriteLine(name[1].Substring(0, 3));
             Console.WriteLine(name[2].Substring(0, 3));
             Console.WriteLine(name[3].Substring(0, 3));
             Console.WriteLine(name[4].Substring(0, 3));
+            Console.WriteLine(name[5].Substring(0, 3));
 
         }
     }
