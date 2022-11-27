@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B8E20CC-12E5-48F4-8ADA-CB54E2F93640}</ProjectGuid>
+    <ProjectGuid>{3A51C7D3-3CB4-4911-B15C-B0703AB2A14B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_27_11_2022</RootNamespace>
     <AssemblyName>27-11-2022</AssemblyName>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Prog2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

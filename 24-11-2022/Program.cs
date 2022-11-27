@@ -9,166 +9,147 @@ namespace tasks
 {
     internal class Program
     {
+        static double SumAvg(double[] d)
+        {
+            double sum = 0;
+            for (int i=0; i < d.Length; i++)
+            {
+                sum += d[i];
+            }
+
+            return sum;
+           
+           
+        }
+        static int SumCube(int d)
+        {
+            return d * d * d;
+        }
+        static void Years(int[] d)
+        {
+          for (int i = 0; i < d.Length; i++)
+            {
+                if (d[i] > 1950)
+                {
+                   Console.WriteLine(d[i]);
+                }
+               
+            }
+        }
+        static int yearstodays(int d)
+        {
+            return d * 365;
+        }
+        static int Farm(int chicken,int pigs,int cow)
+        {
+            if (chicken % 2 == 0)
+            {
+                return chicken * 2;
+            }
+           
+            if (pigs % 2 ==0)
+            { 
+                return pigs * 4;
+            }
+       
+            if (cow % 2 ==0)
+            {
+                return cow * 4;
+            }
+            return chicken;
+        }
+        static void login(string username,string password)
+        {
+            if (username == "Momen" && password == "Momen")
+            {
+                Console.WriteLine("Welcome");
+            }
+            else
+            {
+                Console.WriteLine("Goodbye");
+            }
+        }
+        static int power(int d, int p)
+        {
+            int sum2 =d;
+            for (int i=0; i<p-1; i++)
+            { 
+                sum2 = d*sum2 ;
+
+            }
+            return sum2;
+        }
+        static void leap(int year)
+        {
+            if (year > 2024 || year < 1900) Console.WriteLine("invalid year");
+            else if (year % 4 == 0)
+            {
+                if (year % 100 == 0)
+                {
+                    if (year % 400 == 0)
+                    { Console.WriteLine("This is a leap year"); }
+                    else Console.WriteLine("This is not a leap year");
+                }
+                else Console.WriteLine("This is a leap year");
+
+            }
+            else
+            {
+                Console.WriteLine("Not a leap year");
+            }
+
+
+        }
+        static void prime(int d) 
+        {
+            string l = "not a prime number";
+            if (d % 2== 0 && d !=2)
+            {
+                Console.WriteLine(l);
+
+            }
+            else if (d % 3 ==0 && d != 3)
+            {
+                Console.WriteLine(l);
+            }
+            else if (d % 5 ==0 && d != 5)
+            {
+                Console.WriteLine(l);
+            }
+            else if (d % 7 ==0 && d!= 7)
+            { 
+                Console.WriteLine(l);
+            }
+            else
+            {
+                Console.WriteLine(d);
+            }
+        }
+        static int scentence(string sentence)
+        {
+            string[] slicer = sentence.Split(' ');
+            int counter = 0;
+            foreach (string s in slicer)
+                counter++;
+
+            return counter;
+        }
         static void Main(string[] args)
         {
-            task 1
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 7, 8, 9 };
-            calcSumAndAVG(numbers);
-
-            task 2
-            cube(2);
-
-            task 3
-            int[] years = { 1959, 1940, 1990, 2034, 1930, 1980 };
-            int[] newy = getYears(years);
-
-            foreach (int year in newy)
-            {
-                Console.WriteLine(year);
-            }
-
-
-            task 4
-
-            int years = 12;
-            Console.WriteLine(getAgeInDays(years));
-
-
-            task 5
-            animals(2, 3, 4);
-
-
-            task 7
-            Console.WriteLine(pow(3));
-
-
-            task 8
-            getLeapYears();
-
-            task 9
-            isPrime(4);
-
-            task 10
-             getNumberOfWord("Create function that accept a sentence, and return the number of words");
-
-
-            Console.WriteLine((login("qais@gmail.com", "123456")) ? "pass" : "fail");
-
-
+            double[] doubles = { 2, 2, 2, 2, 2, 2, 2, 2, 2, };
+            Console.WriteLine(SumAvg(doubles));
+            Console.WriteLine(SumAvg(doubles)/doubles.Length);
+            Console.WriteLine(SumCube(3));
+            int[] amer = { 1960, 1970, 1800, 1600, 1700, 1840 };
+            Years(amer);
+            Console.WriteLine(yearstodays(3));
+            Console.WriteLine(Farm(6,4,6));
+            login("Momen", "Momen");
+            Console.WriteLine(power(4,3));
+            leap(1998);
+            prime(89);
+            Console.WriteLine(scentence("Momen is nice and very good at coding"));
         }
-
-        static void calcSumAndAVG(int[] numbers)
-        {
-            int sum = 0;
-            int avg = 0;
-
-            foreach (int number in numbers)
-            {
-                sum += number;
-            }
-
-            avg = sum / numbers.Length;
-
-            Console.WriteLine($"the sum of 10 no is : {sum}");
-            Console.WriteLine($"the avg of 10 no is : {avg}");
-        }
-        //////////////////////////////////////////////////////////////////
-        static void cube(int number)
-        {
-            Console.WriteLine($"the number is {number} and cube of {number} is :" + Math.Pow(number, 3));
-        }
-
-        //////////////////////////////////////////////////////////////////
-
-        static int[] getYears(int[] years)
-        {
-            int index = 0;
-            int[] newYears = { };
-            foreach (int year in years)
-            {
-                if (year > 1950)
-                {
-                    Array.Resize(ref newYears, newYears.Length + 1);
-                    newYears[index++] = year;
-                }
-            }
-
-            return newYears;
-        }
-
-        //////////////////////////////////////////////////////////////////
-        static int getAgeInDays(int years)
-        {
-            return years * 365;
-        }
-        //////////////////////////////////////////////////////////////////////
-
-        static void animals(int chekens, int cows, int pigs)
-        {
-
-            int legsCount = (chekens * 2) + (cows * 4) + (pigs * 4);
-
-            Console.WriteLine("legs are : " + legsCount);
-        }
-        ////////////////////////////////////////////////////////////////////
-        static bool login(string email, string password)
-        {
-            string[] emails = { "qais@gmail.com", "samer@gmail.com", "ahmad@gmail.com" };
-            string[] passwords = { "123456", "654321", "12345" };
-
-            for (int i = 0; i < 3; i++)
-            {
-                if (email == emails[i] && password == passwords[i])
-                    return true;
-            }
-
-            return false;
-        }
-        ////////////////////////////////////////////////////////////////////
-        static double pow(double number)
-        {
-            return number * number;
-        }
-
-        /////////////////////////////////////////////////////////////////////
-
-        static void getLeapYears()
-        {
-
-
-
-            for (int i = 1900; i <= 2022; i++)
-            {
-                if (((i % 4 == 0) && (i % 100 != 0)) || ((i % 4 == 0) && (i % 100 == 0) && (i % 400 == 0)))
-                {
-                    Console.Write(i + " ");
-                }
-            }
-        }
-        /////////////////////////////////////////////////////////////////////
-        static void isPrime(int number)
-        {
-            for (int i = 2; i < number; i++)
-            {
-                if (number % i == 0)
-                {
-                    Console.WriteLine($"{number} is not prime number");
-                    return;
-                }
-
-
-            }
-
-            Console.WriteLine($"{number} is  prime number");
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-
-        static void getNumberOfWord(string sentence)
-        {
-            string[] words = sentence.Split(' ');
-
-            Console.WriteLine($"number of words is {words.Length}");
-        }
+        
     }
+}
