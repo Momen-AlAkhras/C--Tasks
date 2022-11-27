@@ -124,8 +124,8 @@ namespace _21_11_2022
             int minutes = Convert.ToInt32(Console.ReadLine());
             int sum = (int)(hours*60 + minutes);
             Console.WriteLine(sum);
-            int sum2 = (int)(hours/60 + minutes*60);
-            Console.WriteLine(sum2); 
+            //int sum2 = (int)(hours/60 + minutes*60);
+            //Console.WriteLine(sum2); 
             //Task7----------------------------------------------------------------
             Console.WriteLine("Task 6");
             Console.WriteLine("\n");
