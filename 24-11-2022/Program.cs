@@ -11,47 +11,48 @@ namespace tasks
     {
         static void Main(string[] args)
         {
-            //task 1
+            task 1
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 7, 8, 9 };
-            //calcSumAndAVG(numbers);
+            calcSumAndAVG(numbers);
 
-            //task 2 
-            //cube(2);
+            task 2
+            cube(2);
 
-            ////task 3
-            //int[] years = { 1959, 1940, 1990, 2034, 1930, 1980 };
-            //int[] newy =  getYears(years);
+            task 3
+            int[] years = { 1959, 1940, 1990, 2034, 1930, 1980 };
+            int[] newy = getYears(years);
 
-            //foreach (int year in newy) {
-            //   Console.WriteLine(year);
-            //}
-
-
-            //task 4 
-
-            //int years = 12;
-            //Console.WriteLine (getAgeInDays(years));
+            foreach (int year in newy)
+            {
+                Console.WriteLine(year);
+            }
 
 
-            //task 5
-            //animals(2, 3, 4) ;
+            task 4
+
+            int years = 12;
+            Console.WriteLine(getAgeInDays(years));
 
 
-            //task 7 
-            //Console.WriteLine(pow(3));
+            task 5
+            animals(2, 3, 4);
 
 
-            //task 8 
-            //getLeapYears();
-
-            //task 9 
-            //isPrime(4);
-
-            // task 10 
-            // getNumberOfWord("Create function that accept a sentence, and return the number of words");
+            task 7
+            Console.WriteLine(pow(3));
 
 
-            //Console.WriteLine((login("qais@gmail.com", "123456")) ? "pass" : "fail" );
+            task 8
+            getLeapYears();
+
+            task 9
+            isPrime(4);
+
+            task 10
+             getNumberOfWord("Create function that accept a sentence, and return the number of words");
+
+
+            Console.WriteLine((login("qais@gmail.com", "123456")) ? "pass" : "fail");
 
 
         }
