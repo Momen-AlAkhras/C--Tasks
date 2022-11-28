@@ -56,7 +56,7 @@ namespace _27_11_2022
             id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter age");
             age = Convert.ToInt32(Console.ReadLine());
-            Person Amer = new Person(23, 3, "Amer", "Amer.m.amora@gmail.com", "0789949499", "Male");
+            Person Amer = new Person(18, 3, "Momen", "Momen@gmail.com", "0799949499", "Male");
             Amer.print();
             Person person = new Person(age, id, name, email, phone, gender);
             person.print();
